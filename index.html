@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://fb.me/react-0.11.1.js"></script>
+  <script src="http://fb.me/JSXTransformer-0.11.1.js"></script>
+</head>
+<body>
+  <div id="main"></div>
+
+<script src="header.jsx" type="text/jsx"></script>
+<script src="content.jsx" type="text/jsx"></script>
+<script src="footer.jsx" type="text/jsx"></script>
+<script src="sidebar.jsx" type="text/jsx"></script>
+<script type="text/jsx">
+  /** @jsx React.DOM */
+  window.Elvis = 'elvisionario'
+  var Template = React.createClass({
+    render: function() {
+      return (
+      <div>
+        <Header />
+        <Sidebar />
+        <Content name="Maru" />
+        <Footer />
+      </div>
+      )
+    }
+  })
+
+  React.renderComponent(
+    <Template />,
+    document.getElementById('main')
+  );
+</script>
+</body>
+</html>
